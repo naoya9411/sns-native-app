@@ -8,7 +8,7 @@ const RootStack = createStackNavigator();
 
 export const RootStackScreen = () => {
   return (
-    <RootStack.Navigator>
+    <RootStack.Navigator screenOptions={{ headerShown: false }}>
       <RootStack.Group>
         <RootStack.Screen name="SignIn" component={SignInScreen} />
         <RootStack.Screen name="Home" component={MainTabNavigator} />

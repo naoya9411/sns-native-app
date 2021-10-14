@@ -14,7 +14,7 @@ type PostData = {
 
 const posts: PostData[] = postData;
 
-export const HomeScreen = () => {
+export const HomeScreen = ({ navigation }) => {
   const renderItem = ({ item }) => {
     return (
       <View style={styles.postContainer} key={item.id}>
@@ -46,6 +46,7 @@ export const HomeScreen = () => {
         placement="right"
         color="#00e383"
         buttonStyle={styles.fab}
+        onPress={() => navigation.navigate('PostCreateModal')}
         icon={
           <MaterialCommunityIcons
             name="playlist-edit"
